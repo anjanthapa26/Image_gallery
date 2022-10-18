@@ -8,7 +8,7 @@ const ItemLists = ({images}) => {
     console.log(images);
     return ( 
         <>
-        <div className='w-full flex justify-center items-center h-full bg-[#0064C2]'>
+        <div className='flex justify-center m-10 items-center flex-wrap'>
 
             {images.map((image) => {
                return  <Item key={image.id} image={image}  />

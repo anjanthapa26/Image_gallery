@@ -8,10 +8,17 @@ const Item = ({image}) => {
         id:image.id,
         secretId: image.secret
     }
-    console.log(imgData.farmId);
+
+    const imageStyle = {
+        height: '250px',
+        width: '250px'
+    }
+    let url = `https://farm${imgData.farmId}.staticflickr.com/${imgData.serverId}/${imgData.id}_${imgData.secretId}.jpg`
+    console.log(imgData.id);
     return ( 
         <>
-        <div className='m-2 p-2'>
+        <div className='m-2 p-2 bg-[#0064C2]'>
+            <img src={url} alt='img' style={imageStyle}/>
         </div>
         </>
      );
